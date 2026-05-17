@@ -11,7 +11,7 @@ class Keylatch < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/keylatch/keylatch/releases/download/v1.0.0-rc.1/keylatch_1.0.0-rc.1_darwin_amd64.tar.gz"
-      sha256 "5c8cf1079cedab1f7ce24c923e7374b41711a12a465e25a6b74590106dee4f4c"
+      sha256 "3d449cbfc9183c6bddea65e87aac20fb0a414aa9b3ae40ce9837dd505569419c"
 
       define_method(:install) do
         bin.install "keylatch"
@@ -20,7 +20,7 @@ class Keylatch < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/keylatch/keylatch/releases/download/v1.0.0-rc.1/keylatch_1.0.0-rc.1_darwin_arm64.tar.gz"
-      sha256 "090fea56786ba24e09af97eafc2ce9e526fc4d0a1929898c136495cb3f2e51c7"
+      sha256 "0fda9928258df9f1bce37cadcea3009ae3d280d92bf66e5829a1c68dc31dda18"
 
       define_method(:install) do
         bin.install "keylatch"
@@ -32,7 +32,7 @@ class Keylatch < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/keylatch/keylatch/releases/download/v1.0.0-rc.1/keylatch_1.0.0-rc.1_linux_amd64.tar.gz"
-      sha256 "93dd94a3f808d73c89db7241d37fec933caa463f1a9f2e911781d650a589ad43"
+      sha256 "ba82de97440f34cd9b7b3177a5f8d4bad60543939feb3ebb081bc9b439b8bf44"
       define_method(:install) do
         bin.install "keylatch"
         generate_completions_from_executable(bin/"keylatch", "completion")
@@ -40,7 +40,7 @@ class Keylatch < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/keylatch/keylatch/releases/download/v1.0.0-rc.1/keylatch_1.0.0-rc.1_linux_arm64.tar.gz"
-      sha256 "329e031255cadd090651fb77669012e4f5cfa15097af483dc05f33c914b67402"
+      sha256 "99387cad74c131faec3803922cda2d0c634495cea0e5221d4e7dbc6f9cae8120"
       define_method(:install) do
         bin.install "keylatch"
         generate_completions_from_executable(bin/"keylatch", "completion")
