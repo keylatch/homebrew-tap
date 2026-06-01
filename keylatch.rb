@@ -5,13 +5,13 @@
 class Keylatch < Formula
   desc "Zero-trust credential vault CLI for AI-assisted workflows"
   homepage "https://github.com/keylatch/keylatch"
-  version "1.0.0-rc.1"
+  version "0.9.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/keylatch/keylatch/releases/download/v1.0.0-rc.1/keylatch_1.0.0-rc.1_darwin_amd64.tar.gz"
-      sha256 "662f090ffe09096f20598461c36342267acc90e9b8f1f55cd99a0f8707fb64c7"
+      url "https://github.com/keylatch/keylatch/releases/download/v0.9.0/keylatch_0.9.0_darwin_amd64.tar.gz"
+      sha256 "531508fa86d6edd76705fcf07dd1969e2d749b6e54d9f0af3e36b7c0e5065a01"
 
       define_method(:install) do
         bin.install "keylatch"
@@ -19,8 +19,8 @@ class Keylatch < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/keylatch/keylatch/releases/download/v1.0.0-rc.1/keylatch_1.0.0-rc.1_darwin_arm64.tar.gz"
-      sha256 "04cd6154633e9330753c9abc5179d2d57c243269ed51d78f8ac7ccc45842e284"
+      url "https://github.com/keylatch/keylatch/releases/download/v0.9.0/keylatch_0.9.0_darwin_arm64.tar.gz"
+      sha256 "c0c6574cfd65e364d760eb7d438ec63b6dd51c7c90bb27a3334e6232c5a41b82"
 
       define_method(:install) do
         bin.install "keylatch"
@@ -31,16 +31,16 @@ class Keylatch < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/keylatch/keylatch/releases/download/v1.0.0-rc.1/keylatch_1.0.0-rc.1_linux_amd64.tar.gz"
-      sha256 "fccd8d772359319e53cfb78ac15884c03b0b8aa270858ff0d8456d6300afdc40"
+      url "https://github.com/keylatch/keylatch/releases/download/v0.9.0/keylatch_0.9.0_linux_amd64.tar.gz"
+      sha256 "623ef2f90bb9e1cbddb69608e57661a0c2ac08a98b07e5c33505b6af8e86369b"
       define_method(:install) do
         bin.install "keylatch"
         generate_completions_from_executable(bin/"keylatch", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/keylatch/keylatch/releases/download/v1.0.0-rc.1/keylatch_1.0.0-rc.1_linux_arm64.tar.gz"
-      sha256 "175a66de472656605240282100eb3361579a0fb6a9f8f59dd2ea28ad2bc1439c"
+      url "https://github.com/keylatch/keylatch/releases/download/v0.9.0/keylatch_0.9.0_linux_arm64.tar.gz"
+      sha256 "96769e8c570be6e0b3bb321c17dc65944209dd39c815cdd69932aa8b0c26d962"
       define_method(:install) do
         bin.install "keylatch"
         generate_completions_from_executable(bin/"keylatch", "completion")
