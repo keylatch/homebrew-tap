@@ -4,28 +4,28 @@
 class Keylatch < Formula
   desc "Zero-trust credential vault CLI for AI-assisted workflows"
   homepage "https://github.com/keylatch/keylatch"
-  version "0.9.8"
+  version "0.9.9"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/keylatch/keylatch/releases/download/v0.9.8/keylatch_0.9.8_darwin_amd64.tar.gz"
-      sha256 "258f8717e1281fd1c53ed0583ff1fcbc2ac0e7a14f821f2be13b726183e0c8e1"
+      url "https://github.com/keylatch/keylatch/releases/download/v0.9.9/keylatch_0.9.9_darwin_amd64.tar.gz"
+      sha256 "e823f4ce897ea3de5884b9531f3167f99c654912b81965fbf848e861af929458"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/keylatch/keylatch/releases/download/v0.9.8/keylatch_0.9.8_darwin_arm64.tar.gz"
-      sha256 "671b87463f1459352f56435f55d027189501b9228f073c697ec3a5751f742d29"
+      url "https://github.com/keylatch/keylatch/releases/download/v0.9.9/keylatch_0.9.9_darwin_arm64.tar.gz"
+      sha256 "b0fc0f8a0477164f553da59d0fffac9e129c071f776c2fb24129f2aa8d48983d"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/keylatch/keylatch/releases/download/v0.9.8/keylatch_0.9.8_linux_amd64.tar.gz"
-      sha256 "523fe3af8e7b97ae68a898021bddcd2d26150e19eb65ff10af1b5b0e25833aea"
+      url "https://github.com/keylatch/keylatch/releases/download/v0.9.9/keylatch_0.9.9_linux_amd64.tar.gz"
+      sha256 "afbe2c48e43d6c079635f91c51fe2cb925b3c8eea747fe1c9df7b2d89b5567ed"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/keylatch/keylatch/releases/download/v0.9.8/keylatch_0.9.8_linux_arm64.tar.gz"
-      sha256 "eba20ca79a52c093cee52b63950eb5c9550d7b452f3f8a5d0efb76fd7cc98f7f"
+      url "https://github.com/keylatch/keylatch/releases/download/v0.9.9/keylatch_0.9.9_linux_arm64.tar.gz"
+      sha256 "27be91c502949cd065ec32009a690602b8dfbd357101a943bf3e2a9863f13784"
     end
   end
 
